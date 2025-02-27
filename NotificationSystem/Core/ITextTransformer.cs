@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NotificationSystem.Core
 {
-    internal interface ITextTransformer
+    public interface ITextTransformer
     {
+        string TransformText(string input);
     }
 }

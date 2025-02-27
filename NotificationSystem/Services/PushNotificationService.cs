@@ -1,19 +1,19 @@
-﻿using NotificationSystem.Core;
+﻿using Microsoft.Extensions.Logging;
+using NotificationSystem.Core;
 
 namespace NotificationSystem.Services
 {
-    public class PushNotificationService : INotificationService
+    public class PushNotificationService : BaseNotificationService
     {
-        public async Task SendNotificationAsync(string recepient, string message)
+        public PushNotificationService(ILogger<BaseNotificationService> logger, ITextTransformer textTransformer)
+            : base(logger, textTransformer)
         {
-            if (string.IsNullOrWhiteSpace(recepient))
-                throw new ArgumentException("Recipient required", nameof(recepient));
-            if (string.IsNullOrWhiteSpace(message))
-                throw new ArgumentException("Message required", nameof(message));
+        }
 
-            // Simulate push notification (Firebase, OneSignal, etc. in production)
-            await Task.Delay(1000); // Simulate 1 second delay
-            Console.WriteLine($"Push notification to {recepient}: {message}");
+        protected override async Task SendNotificationInternalAsync(string recipient, string message)
+        {
+            await Task.Delay(100); // Simulate push
+            _logger.LogInformation("Push sent to {Recipient}", recipient);
         }
     }
 }

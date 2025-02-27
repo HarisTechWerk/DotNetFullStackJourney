@@ -1,19 +1,21 @@
-﻿using NotificationSystem.Core;
+﻿using Microsoft.Extensions.Logging;
+using NotificationSystem.Core;
 
 namespace NotificationSystem.Services
 {
-    public class SMSNotificationService : INotificationService
+    public class SMSNotificationService : BaseNotificationService
     {
-        public async Task SendNotificationAsync(string recepient, string message)
+        public SMSNotificationService(ILogger<BaseNotificationService> logger, ITextTransformer textTransformer)
+            : base(logger, textTransformer)
         {
-            if (string.IsNullOrWhiteSpace(recepient))
-                throw new ArgumentException("Recipient required", nameof(recepient));
-            if (string.IsNullOrWhiteSpace(message))
-                throw new ArgumentException("Message required", nameof(message));
+        }
 
-            // Simulate SMS (Twilio, Nexmo, etc. in production)
-            await Task.Delay(1000); // Simulate 1 second delay
-            Console.WriteLine($"SMS to {recepient}: {message}");
+        protected override async Task SendNotificationInternalAsync(string recipient, string message)
+        {
+            string transformedMessage = _textTransformer.TransformText(message); // Apply transform (reversed)
+
+            await Task.Delay(100); // Simulate 100ms delay, SMS
+            _logger.LogInformation("SMS sent to {Recipient}", transformedMessage);
         }
     }
 }
