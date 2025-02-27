@@ -12,6 +12,25 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
 - **User Story**: "As a developer, I want to reduce repeated code in notification services by extracting common logic into a base class."
 - Refactored with `BaseNotificationService`, ensuring Liskov Substitution Principle (LSP) and adding logging with ILogger.
 
+- **Live Proof**:
+  - **Solution Structure**: 
+    <details><summary>Click to see VS 2022 Solution Explorer</summary>
+    <img src="docs\Task2_Structure.png" alt="Task 2 Solution Structure" width="600"/>
+    </details>
+  - **Runner Output**: 
+    <details><summary>Click to see Debug Console Logs</summary>
+    <img src="docs\Task2_Output.png" alt="Task 2 Runner Output" width="600"/>
+    </details>
+  - **Tests Passing**: 
+    <details><summary>Click to see Test Explorer</summary>
+    <img src="docs\Task2_Tests.png" alt="Task 2 Unit Tests" width="600"/>
+    </details>
+
+### Task 3: Implement a ITextTransformer Interface to Standardize Text Processing
+- **User Story**: "As a developer, I want all text transformations to happen via `ITextTransformer` so we can easily swap different transformation strategies."
+- Created `ITextTransformer` interface, implemented `UpperCaseTransformer` and `ReverseTextTransformer`, and integrated with DI to dynamically transform notification messages (e.g., uppercase for email, reverse for SMS).
+
+
 ## Tech Stack
 - C#, .NET 8
 - ASP.NET Core (for DI setup)
