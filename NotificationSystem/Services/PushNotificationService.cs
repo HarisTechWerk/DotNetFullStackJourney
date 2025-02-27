@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NotificationSystem.Core;
 
 namespace NotificationSystem.Services
 {
-    internal class PushNotificationService
+    public class PushNotificationService : INotificationService
     {
+        public async Task SendNotificationAsync(string recepient, string message)
+        {
+            if (string.IsNullOrWhiteSpace(recepient))
+                throw new ArgumentException("Recipient required", nameof(recepient));
+            if (string.IsNullOrWhiteSpace(message))
+                throw new ArgumentException("Message required", nameof(message));
+
+            // Simulate push notification (Firebase, OneSignal, etc. in production)
+            await Task.Delay(1000); // Simulate 1 second delay
+            Console.WriteLine($"Push notification to {recepient}: {message}");
+        }
     }
 }
