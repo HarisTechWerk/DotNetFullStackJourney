@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using NotificationSystem.Core;
 using NotificationSystem.Services;
 using System.Net.Mail;
@@ -11,7 +12,7 @@ namespace NotificationSystem
         static async Task Main(string[] args)
         {
             var services = new ServiceCollection();
-
+            services.AddLogging(logging => logging.AddConsole());
             services.AddScoped<INotificationService, EmailNotificationService>(_ =>
                 new EmailNotificationService(new SmtpClient("smtp.company.com")));
             services.AddScoped<INotificationService, SMSNotificationService>();
@@ -19,6 +20,7 @@ namespace NotificationSystem
 
             var provider = services.BuildServiceProvider();
             var notifications = provider.GetServices<INotificationService>();
+
 
             foreach (var service in notifications)
             {

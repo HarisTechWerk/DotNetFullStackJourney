@@ -2,7 +2,7 @@
 using NotificationSystem.Core;
 using Xunit;
 
-namespace NotificationSystem.Tests.Tests
+namespace NotificationSystem.Tests
 {
     public class NotificationServiceTests
     {
