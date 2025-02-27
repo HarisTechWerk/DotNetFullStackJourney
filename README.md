@@ -36,7 +36,7 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
     </details>
   - **Runner Output**: 
     <details><summary>Click to see Debug Console Logs</summary>
-    <img src="docs\Task3_Output.png" alt="Task 3 Runner Output" width="600"/>
+    <img src="docs\Task3_Structure.png" alt="Task 3 Runner Output" width="600"/>
     </details>
   
 
