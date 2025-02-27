@@ -12,7 +12,7 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
 - **User Story**: "As a developer, I want to reduce repeated code in notification services by extracting common logic into a base class."
 - Refactored with `BaseNotificationService`, ensuring Liskov Substitution Principle (LSP) and adding logging with ILogger.
 
-- **Live Proof**:
+- **Live Demo**:
   - **Solution Structure**: 
     <details><summary>Click to see VS 2022 Solution Explorer</summary>
     <img src="docs\Task2_Structure.png" alt="Task 2 Solution Structure" width="600"/>
@@ -28,8 +28,17 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
 
 ### Task 3: Implement a ITextTransformer Interface to Standardize Text Processing
 - **User Story**: "As a developer, I want all text transformations to happen via `ITextTransformer` so we can easily swap different transformation strategies."
-- Created `ITextTransformer` interface, implemented `UpperCaseTransformer` and `ReverseTextTransformer`, and integrated with DI to dynamically transform notification messages (e.g., uppercase for email, reverse for SMS).
-
+- Created `ITextTransformer` interface, implemented `UpperCaseTransformer` and `ReverseTextTransformer`, and integrated with DI to dynamically transform notification messages (e.g., uppercase for email/Push, reverse for SMS). Refactored `EmailNotificationService` and `SMSNotificationService` to inherit `BaseNotificationService` and use `ITextTransformer`.
+- **Live Demo**:
+  - **Solution Structure**: 
+    <details><summary>Click to see VS 2022 Solution Explorer</summary>
+    <img src="docs\Task3_Structure.png" alt="Task 3 Solution Structure" width="600"/>
+    </details>
+  - **Runner Output**: 
+    <details><summary>Click to see Debug Console Logs</summary>
+    <img src="docs\Task3_Output.png" alt="Task 3 Runner Output" width="600"/>
+    </details>
+  
 
 ## Tech Stack
 - C#, .NET 8
