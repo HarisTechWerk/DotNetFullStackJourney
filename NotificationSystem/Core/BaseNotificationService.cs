@@ -20,6 +20,7 @@ namespace NotificationSystem.Core
                 throw new ArgumentException("Message required", nameof(message));
 
             _logger.LogInformation($"Sending notification to {0} via {1}", recepient, GetType().Name);
+            await SendNotificationInternalAsync(recepient, message);
         }
 
         protected abstract Task SendNotificationInternalAsync(string recepient, string message);
