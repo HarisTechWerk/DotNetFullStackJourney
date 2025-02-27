@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem", "Notif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem.Tests", "NotificationSystem.Tests\NotificationSystem.Tests.csproj", "{DB77A0AC-2929-4E91-A0A2-3FC295C60A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem.Runner", "NotificationSystem.Runner\NotificationSystem.Runner.csproj", "{6F53CA30-B9F3-43AA-98D1-619179A85763}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DB77A0AC-2929-4E91-A0A2-3FC295C60A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB77A0AC-2929-4E91-A0A2-3FC295C60A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB77A0AC-2929-4E91-A0A2-3FC295C60A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F53CA30-B9F3-43AA-98D1-619179A85763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F53CA30-B9F3-43AA-98D1-619179A85763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F53CA30-B9F3-43AA-98D1-619179A85763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F53CA30-B9F3-43AA-98D1-619179A85763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
