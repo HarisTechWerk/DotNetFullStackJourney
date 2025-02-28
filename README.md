@@ -52,8 +52,5 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
 3. Build the solution: `dotnet build`
 4. Run the Runner: `dotnet run NotificationSystem.Runner` (or F5 in VS)
 
-## Future Work
-- Task 3: Implementing `ITextTransformer` for dynamic text processing in notifications.
-
 ## License
 MIT License
