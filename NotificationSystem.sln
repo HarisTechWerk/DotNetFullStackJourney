@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem", "NotificationSystem\NotificationSystem.csproj", "{1A673BDE-88FE-4A4C-B814-C5E19FEB5549}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem.Tests", "NotificationSystem.Tests\NotificationSystem.Tests.csproj", "{DB77A0AC-2929-4E91-A0A2-3FC295C60A11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSystem.Runner", "NotificationSystem.Runner\NotificationSystem.Runner.csproj", "{6F53CA30-B9F3-43AA-98D1-619179A85763}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F8F1416D-EDE7-4839-80EF-74AC6BF6A35A}"
+	ProjectSection(SolutionItems) = preProject
+		PluginLoader.cs = PluginLoader.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

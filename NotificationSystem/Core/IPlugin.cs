@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace NotificationSystem.Core
 {
-    internal interface IPlugin
+    public interface IPlugin
     {
+        string Name { get; }
+        Task ExecuteAsync(string recipient, string message);
     }
 }
