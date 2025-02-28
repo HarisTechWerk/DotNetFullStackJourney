@@ -38,6 +38,23 @@ This repository showcases my journey to becoming a professional .NET Full Stack 
     <details><summary>Click to see Debug Console Logs</summary>
     <img src="docs\Task3_Output.png" alt="Task 3 Runner Output" width="600"/>
     </details>
+
+### Task 4: Implement Extension Methods for Reusable Date Parsing
+- **User Story**: "As a developer, I want a set of extension methods that convert custom date formats into standard DateTime objects."
+- Entwickelte Erweiterungsmethoden für wiederverwendbares Datums-Parsen (z.B. dd-MM-yyyy, yyyy/MM/dd HH:mm:ss), um Code-Lesbarkeit und Flexibilität zu verbessern, mit Unit-Tests für Randfälle.
+- **Live Demo**:
+  - **Solution Structure**: 
+    <details><summary>Click to see VS 2022 Solution Explorer</summary>
+    <img src="docs\Task4_Structure.png" alt="Task 4 Solution Structure" width="600"/>
+    </details>
+  - **Runner Output**: 
+    <details><summary>Click to see Debug Console Logs</summary>
+    <img src="docs\Task4_Output.png" alt="Task 4 Runner Output" width="600"/>
+    </details>
+  - **Tests Passing**: 
+    <details><summary>Click to see Test Explorer</summary>
+    <img src="docs\Task4_Tests.png" alt="Task 4 Unit Tests" width="600"/>
+    </details>
   
 
 ## Tech Stack
